@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ Enable CORS for your frontend origin
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://evolveai-4.onrender.com'], // allow both frontend dev & deployed URL
+  origin: ['http://localhost:3000', 'https://evolveai-4.onrender.com','https://evolveaifrontend.vercel.app'], // allow both frontend dev & deployed URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
