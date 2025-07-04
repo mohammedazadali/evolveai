@@ -5,6 +5,7 @@ import chat from "../model/chat.js";
 import orders from "../model/order.js";
 import products from "../model/product.js";
 import { generateCaseId } from "../utils/caseIdGenerator.js";
+import { getGeminiResponse } from "../utils/geminiFallback.js";
 
 // Predefined intent keyword groups
 const intents = {
@@ -168,10 +169,9 @@ export const sendMessage = async (req, res) => {
       return res.json({ reply, caseId });
     }
 
-    // Default fallback if no rule matched
+ 
     if (!reply) {
-      reply =
-        "🤖 I’m trained only to assist with product availability and order tracking. Please ask about a product or provide your order ID.";
+      reply = await getGeminiResponse(message);
     }
 
     await chat.create({
