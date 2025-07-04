@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ABC Wireless Mouse",
+    "available": true,
+    "price": 599,
+    "stock": 25
+  },
+  {
+    "name": "XYZ Headphones",
+    "available": false,
+    "price": 1999,
+    "stock": 0
+  },
+  {
+    "name": "DEF Laptop Stand",
+    "available": true,
+    "price": 899,
+    "stock": 10
+  }
+]
